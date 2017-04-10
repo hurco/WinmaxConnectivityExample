@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfDataServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfDataServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="UnmanagedDataTypes.BulkNotificationDataType">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="m_Msg" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="m_MsgType" type="xs:int" />
+      <xs:element minOccurs="0" name="m_NotificationIndex" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="m_Timestamp" type="tns:UnmanagedDataTypes._SYSTEMTIME" />
+      <xs:element minOccurs="0" name="m_wrcFileName" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnmanagedDataTypes.BulkNotificationDataType" nillable="true" type="tns:UnmanagedDataTypes.BulkNotificationDataType" />
+  <xs:complexType name="UnmanagedDataTypes._SYSTEMTIME">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="wDay" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="wDayOfWeek" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="wHour" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="wMilliseconds" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="wMinute" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="wMonth" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="wSecond" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="wYear" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnmanagedDataTypes._SYSTEMTIME" nillable="true" type="tns:UnmanagedDataTypes._SYSTEMTIME" />
+  <xs:complexType name="UnmanagedDataTypes.RemoteCommandInfoType">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dValue" nillable="true" type="q1:ArrayOfdouble" />
+      <xs:element minOccurs="0" name="dwCmdCompleteSid" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="dwCmdId" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="sValue" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnmanagedDataTypes.RemoteCommandInfoType" nillable="true" type="tns:UnmanagedDataTypes.RemoteCommandInfoType" />
+  <xs:complexType name="UnmanagedDataTypes.BulkMachinePosType">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dMachinePosition" nillable="true" type="q2:ArrayOfdouble" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnmanagedDataTypes.BulkMachinePosType" nillable="true" type="tns:UnmanagedDataTypes.BulkMachinePosType" />
+  <xs:complexType name="UnmanagedDataTypes.BulkToolDataType">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ack" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToolNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="tooldata" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="tooldatalength" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnmanagedDataTypes.BulkToolDataType" nillable="true" type="tns:UnmanagedDataTypes.BulkToolDataType" />
+  <xs:complexType name="UnmanagedDataTypes.BulkCurrentPartSetupType">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="A_Centerline" nillable="true" type="q3:ArrayOfdouble" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="B_Centerline" nillable="true" type="q4:ArrayOfdouble" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="C_Centerline" nillable="true" type="q5:ArrayOfdouble" />
+      <xs:element minOccurs="0" name="XYSkewAngle" type="xs:double" />
+      <xs:element minOccurs="0" name="offsets" type="tns:UnmanagedDataTypes.BulkMachinePosType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnmanagedDataTypes.BulkCurrentPartSetupType" nillable="true" type="tns:UnmanagedDataTypes.BulkCurrentPartSetupType" />
+  <xs:complexType name="UnmanagedDataTypes.BulkToolChangeInfoType">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bAutoSafetyCouldMove" nillable="true" type="q6:ArrayOfboolean" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bAutoToolChangeCouldMove" nillable="true" type="q7:ArrayOfboolean" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bManualSafetyCouldMove" nillable="true" type="q8:ArrayOfboolean" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bManualToolChangeCouldMove" nillable="true" type="q9:ArrayOfboolean" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bMoveToZone1CouldMove" nillable="true" type="q10:ArrayOfboolean" />
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bMoveToZone2CouldMove" nillable="true" type="q11:ArrayOfboolean" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bPalletChangeCouldMove" nillable="true" type="q12:ArrayOfboolean" />
+      <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bTPSInsertToolCouldMove" nillable="true" type="q13:ArrayOfboolean" />
+      <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bTPSRemoveToolCouldMove" nillable="true" type="q14:ArrayOfboolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnmanagedDataTypes.BulkToolChangeInfoType" nillable="true" type="tns:UnmanagedDataTypes.BulkToolChangeInfoType" />
+  <xs:complexType name="SIDValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Since" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SIDValue" nillable="true" type="tns:SIDValue" />
+</xs:schema>

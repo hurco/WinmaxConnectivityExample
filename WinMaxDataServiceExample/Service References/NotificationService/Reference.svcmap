@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1e8a1a43-bafe-4c7e-b36e-badadede0a67" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://127.0.0.1/NotificationService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="05.wsdl" MetadataType="Wsdl" ID="1cbc8f5f-8e59-467d-9b25-fe805824dcfb" SourceId="1" SourceUrl="net.tcp://127.0.0.1/NotificationService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d84957bd-0c18-4803-bb42-06a9b251f5f3" SourceId="1" SourceUrl="net.tcp://127.0.0.1/NotificationService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="9bcc5998-b823-41d1-8d7f-315f5af75173" SourceId="1" SourceUrl="net.tcp://127.0.0.1/NotificationService/mex" />
+    <MetadataFile FileName="WcfDataServices.xsd" MetadataType="Schema" ID="13748fba-09f6-4a77-b896-1834cf85d19b" SourceId="1" SourceUrl="net.tcp://127.0.0.1/NotificationService/mex" />
+    <MetadataFile FileName="WcfDataServices1.xsd" MetadataType="Schema" ID="69cbd986-869e-4f8d-bd1c-c21b69895948" SourceId="1" SourceUrl="net.tcp://127.0.0.1/NotificationService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="724b4fe0-1791-4a63-8f8d-24c9380abcb4" SourceId="1" SourceUrl="net.tcp://127.0.0.1/NotificationService/mex" />
+    <MetadataFile FileName="05.xsd" MetadataType="Schema" ID="8a342d4a-773a-4297-8b48-dddad284233a" SourceId="1" SourceUrl="net.tcp://127.0.0.1/NotificationService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

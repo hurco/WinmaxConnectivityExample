@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="WcfDataServices" elementFormDefault="qualified" targetNamespace="WcfDataServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/WcfDataServices" />
+  <xs:complexType name="BulkToolChangeInfoTypeBox">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Bulk">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfDataServices" minOccurs="0" name="BulkStruct" type="q1:UnmanagedDataTypes.BulkToolChangeInfoType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BulkToolChangeInfoTypeBox" nillable="true" type="tns:BulkToolChangeInfoTypeBox" />
+  <xs:complexType name="Bulk">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Bulk" nillable="true" type="tns:Bulk" />
+  <xs:complexType name="BulkNotificationDataTypeBox">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Bulk">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfDataServices" minOccurs="0" name="BulkStruct" type="q2:UnmanagedDataTypes.BulkNotificationDataType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BulkNotificationDataTypeBox" nillable="true" type="tns:BulkNotificationDataTypeBox" />
+  <xs:complexType name="BulkRemoteCommandDataTypeBox">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Bulk">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfDataServices" minOccurs="0" name="BulkStruct" type="q3:UnmanagedDataTypes.RemoteCommandInfoType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BulkRemoteCommandDataTypeBox" nillable="true" type="tns:BulkRemoteCommandDataTypeBox" />
+  <xs:complexType name="BulkMachinePosTypeBox">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Bulk">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfDataServices" minOccurs="0" name="BulkStruct" type="q4:UnmanagedDataTypes.BulkMachinePosType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BulkMachinePosTypeBox" nillable="true" type="tns:BulkMachinePosTypeBox" />
+  <xs:complexType name="BulkToolDataTypeBox">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Bulk">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfDataServices" minOccurs="0" name="BulkStruct" type="q5:UnmanagedDataTypes.BulkToolDataType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BulkToolDataTypeBox" nillable="true" type="tns:BulkToolDataTypeBox" />
+  <xs:complexType name="BulkPartSetupTypeBox">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Bulk">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfDataServices" minOccurs="0" name="BulkStruct" type="q6:UnmanagedDataTypes.BulkCurrentPartSetupType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BulkPartSetupTypeBox" nillable="true" type="tns:BulkPartSetupTypeBox" />
+  <xs:complexType name="GetBulkParams">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetBulkParams" nillable="true" type="tns:GetBulkParams" />
+  <xs:complexType name="BulkWrapper">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bulk" nillable="true" type="tns:Bulk" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BulkWrapper" nillable="true" type="tns:BulkWrapper" />
+</xs:schema>
